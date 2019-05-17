@@ -64,14 +64,16 @@ fn read_number(message: &str) -> i32 {
 }
 
 fn get_high_score() -> i32 {
-    let data = fs::read_to_string("/home/bbolen/projects/rust/guessing_cargo/high_score.txt")
-        .expect("Unable to read file");
+    let data = match fs::read_to_string("high_score.txt") {
+        Ok(num) => num,
+        Err(_) => "0".to_owned()
+    };
     let score: i32 = data.trim().parse()
         .expect("High score was not a number");
     score
 }
 
 fn write_high_score(score: i32) -> () {
-    fs::write("/home/bbolen/projects/rust/guessing_cargo/high_score.txt", score.to_string())
+    fs::write("high_score.txt", score.to_string())
         .expect("Unable to write file");
 }
