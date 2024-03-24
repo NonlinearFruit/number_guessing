@@ -8,7 +8,7 @@ use std::cmp::Ordering;
 fn main() {
     print_title();
 
-    let mut guess_count = 8;
+    let guess_count = 8;
     let upper_bound = read_number("Please the upper bound.");
     let mut score = upper_bound;
     let secret = get_secret(upper_bound);
