@@ -1,6 +1,6 @@
 # Number Guessing
 
-[![build](https://travis-ci.org/NonlinearFruit/number_guessing.svg?branch=master)](https://travis-ci.org/NonlinearFruit/number_guessing)
+[![build](https://img.shields.io/github/actions/workflow/status/NonlinearFruit/number_guessing/ci.yaml)](https://github.com/NonlinearFruit/number_guessing/actions/new)
 
 Can you guess my random number? Set the upper bound. You have 8 guesses. Your upper bound is your score (if you succeed).
 
